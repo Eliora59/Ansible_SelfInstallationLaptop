@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Modification of sources.list for SID"
+echo "deb https://deb.debian.org/debian sid main contrib non-free" > /etc/apt/sources.list
+echo "deb-src https://deb.debian.org/debian sid main contrib non-free" >> /etc/apt/sources.list
+
+echo "Refresh metadatas of repository"
+apt update
+echo "Installation of prerequisite"
+DEBIAN_FRONTEND=noninteractive apt install -y git ansible
+
+echo "Exécution du playbook d'installation"
+ansible-pull playbook.yml -U https://github.com/Eliora59/SelfInstall.git
