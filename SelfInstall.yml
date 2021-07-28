@@ -143,7 +143,12 @@
       src: Wallpapers
       dest: /home/theophile/Images
 
-
+  - name: Add ansible-pull cron job
+    cron:
+      name: Ansible auto-provision
+      user: root
+      hour: "*/1"
+      job: ansible-pull -o -U https://github.com/Eliora59/SelfInstall.git
 
 
         ##################################### Can't reboot Localhost, "Running reboot with local connection would reboot the control node"
