@@ -1,0 +1,21 @@
+---
+- name: Full upgrade Debian or Ubuntu
+  apt:
+    update_cache: yes
+    upgrade: full
+    state: latest
+  when: ansible_distribution == ["Debian", "Ubuntu"]
+
+- name: Full upgrade ArchLinux
+  pacman: 
+    update_cache: yes
+    upgrade: yes
+    state: latest
+  when: ansible_distribution == "Archlinux"
+
+- name: Full upgrade of Rhel or CentOS
+  yum: 
+    update_cache: yes
+    update_only: yes
+    state: latest
+  when: ansible_distribution == ["RedHat", "CentOS"]
