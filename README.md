@@ -27,6 +27,7 @@ wget -O - https://raw.githubusercontent.com/Eliora59/SelfInstall/main/init | bas
         * Download and compress it (Try with git-lfs.github.com for file more large than 100 MB) 
 * Add IOS image
 * Vault "files" directory
+* https://www.kite.com/
 
 ## To improve
 * Repository Visual Studio Code, to use modules like _apt_key_ and _apt_repository_ instead of module _shell_ with commands that microsoft gives.

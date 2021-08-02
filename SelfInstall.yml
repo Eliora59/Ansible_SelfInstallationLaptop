@@ -150,6 +150,11 @@
       hour: "*/1"
       job: ansible-pull -o -U https://github.com/Eliora59/SelfInstall.git
 
+  - name: Templétisation de .vimrc
+    template:
+      src: .vimrc.j2
+      dest: /home/theophile/.vimrc
+
 
         ##################################### Can't reboot Localhost, "Running reboot with local connection would reboot the control node"
         # - name: "Reboot of Laptop"
