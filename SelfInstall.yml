@@ -152,7 +152,7 @@
 
   - name: Templétisation de .vimrc
     template:
-      src: .vimrc.j2
+      src: vimrc.j2
       dest: /home/theophile/.vimrc
 
 
