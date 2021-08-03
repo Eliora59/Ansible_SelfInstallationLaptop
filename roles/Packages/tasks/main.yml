@@ -12,29 +12,26 @@
       - aptitude
       - bison
       - build-essential
-      - curl
-      - cinnamon
-      - git
-      - vim
-      - net-tools
-      - htop
       - ca-certificates
       - cinnamon
+      - curl
       - dirmngr
-      - dynamips
       - dkms
       - dynamips
       - firefox-esr-l10n-fr
       - firmware-iwlwifi
       - firmware-realtek
+      - git
       - gnome-terminal
       - gnupg
+      - htop
       - hydra
       - intel-microcode
       - keepassxc
       - laptop-detect
       - linux-source
       - macchanger
+      - net-tools
       - nmap
       - postgresql          # Require for Metasploit-Framework
       - python3-pip
@@ -46,33 +43,34 @@
       - thunderbird-l10n-fr
       - tor
       - tree
+      - vim
       - wireshark
       - wireshark-qt
       - yersinia
   when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
 
-- name: Full upgrade ArchLinux
-  pacman: 
-    update_cache: yes
-    upgrade: yes
-    state: present
-    name:
-      - curl
-      - cinnamon
-      - git
-      - vim
-      - net-tools
-      - htop
-      - bison
-      - base-devel
-      - ca-certificate
-      - dkms
-      - firefox
-  when: ansible_distribution == "Archlinux"
+# - name: Full upgrade ArchLinux
+#   pacman: 
+#     update_cache: yes
+#     upgrade: yes
+#     state: present
+#     name:
+#       - curl
+#       - cinnamon
+#       - git
+#       - vim
+#       - net-tools
+#       - htop
+#       - bison
+#       - base-devel
+#       - ca-certificate
+#       - dkms
+#       - firefox
+#   when: ansible_distribution == "Archlinux"
 
-- name: Full upgrade of Rhel or CentOS
-  yum: 
-    update_cache: yes
-    update_only: yes
-    state: latest
-  when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
+# - name: Full upgrade of Rhel or CentOS
+#   yum: 
+#     update_cache: yes
+#     update_only: yes
+#     state: latest
+#   when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
