@@ -2,58 +2,11 @@
 - name: "Self Installation of Laptop"
   become: yes
   hosts: localhost
+  ansible_python_interpreter: /usr/bin/python3
   roles:
   - Packages
 
   post_tasks:
-  - name: Installation des premiers paquets
-    apt:
-      autoclean: yes
-      autoremove: yes
-      install_recommends: yes
-      name:
-        - apt-transport-https
-        - aptitude
-        - curl
-        - cinnamon
-        - git
-        - vim
-        - net-tools
-        - htop
-        - bison
-        - build-essential
-        - ca-certificates
-        - cinnamon
-        - dirmngr
-        - dynamips
-        - dkms
-        - dynamips
-        - firefox-esr-l10n-fr
-        - firmware-iwlwifi
-        - firmware-realtek
-        - gnome-terminal
-        - gnupg
-        - hydra
-        - intel-microcode
-        - keepassxc
-        - laptop-detect
-        - linux-source
-        - macchanger
-        - nmap
-        - postgresql          # Require for Metasploit-Framework
-        - python3-pip
-        - python3-sip
-        - python3-pyqt5
-        - python3-pyqt5.qtsvg
-        - python3-pyqt5.qtwebsockets
-        - thunderbird
-        - thunderbird-l10n-fr
-        - tor
-        - tree
-        - wireshark
-        - wireshark-qt
-        - yersinia
-
   - name: Ajout des dépôts supplémentaires
     block:
     - name: Installation of Visual Studio Code
