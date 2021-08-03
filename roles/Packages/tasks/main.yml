@@ -1,10 +1,60 @@
 ---
-- name: Full upgrade Debian or Ubuntu
-  apt:
-    update_cache: yes
-    upgrade: full
-    state: latest
-  when: ansible_distribution == "Debian" or "Ubuntu"
+- name: Full upgrade of {{ ansible_distribution }}
+  block:
+  - name: Distribution update 
+    apt:
+      update_cache: yes
+      upgrade: full
+      state: latest
+
+  - name: Installation of first packages
+    apt:
+      autoclean: yes
+      autoremove: yes
+      install_recommends: yes
+      name:
+        - apt-transport-https
+        - aptitude
+        - curl
+        - cinnamon
+        - git
+        - vim
+        - net-tools
+        - htop
+        - bison
+        - build-essential
+        - ca-certificates
+        - cinnamon
+        - dirmngr
+        - dynamips
+        - dkms
+        - dynamips
+        - firefox-esr-l10n-fr
+        - firmware-iwlwifi
+        - firmware-realtek
+        - gnome-terminal
+        - gnupg
+        - hydra
+        - intel-microcode
+        - keepassxc
+        - laptop-detect
+        - linux-source
+        - macchanger
+        - nmap
+        - postgresql          # Require for Metasploit-Framework
+        - python3-pip
+        - python3-sip
+        - python3-pyqt5
+        - python3-pyqt5.qtsvg
+        - python3-pyqt5.qtwebsockets
+        - thunderbird
+        - thunderbird-l10n-fr
+        - tor
+        - tree
+        - wireshark
+        - wireshark-qt
+        - yersinia
+  when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
 
 - name: Full upgrade ArchLinux
   pacman: 
