@@ -9,4 +9,4 @@ echo "Installation of prerequisite"
 DEBIAN_FRONTEND=noninteractive apt install -y git ansible
 
 echo "Exécution du playbook d'installation"
-ansible-pull SelfInstall.yml -U https://github.com/Eliora59/SelfInstall.git -vvv
+/usr/bin/ansible-pull SelfInstall.yml -U https://github.com/Eliora59/SelfInstall.git -vvv
