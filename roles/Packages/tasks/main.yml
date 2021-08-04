@@ -1,5 +1,5 @@
 ---
-- name: Full upgrade ans installation packages of {{ ansible_distribution }}
+- name: Full upgrade and installation packages of Debian
   apt:
     update_cache: yes
     upgrade: full
