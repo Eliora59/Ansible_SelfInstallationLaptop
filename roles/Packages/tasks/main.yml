@@ -52,7 +52,6 @@
 - name: Full upgrade ArchLinux
   pacman: 
     update_cache: yes
-    upgrade: yes
     state: latest
     name:
       - base-devel
@@ -73,8 +72,15 @@
       - net-tools
       - nmap
       - postgresql
-      - 
+      - python
+      - python-sip
+      - python-pyqt5
+      - thunderbird
+      - tor
+      - tree
       - vim
+      - wireshark
+      - wireshark-qt
   when: ansible_distribution == "Archlinux"
 
   # firmware-iwlwifi
@@ -82,6 +88,7 @@
   # dirmngr
   # dynamips
   # intel-microcode
+  # yersinia
 
 - name: Full upgrade of Rhel or CentOS
   yum: 
@@ -89,5 +96,23 @@
     update_only: yes
     state: latest
     name:
-      - 
+      - bison
+      - dkms
+      - firefox
+      - git
+      - gnome-terminal
+      - htop
+      - keepassxc
+      - nmap
+      - postgresql
+      - python3-pip
+      - thunderbird
+      - tor
+      - tree
+      - vim
+      - wireshark
   when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
+
+  # hydra
+  # laptop-detect
+  # macchanger
