@@ -56,7 +56,7 @@
     name:
       - base-devel
       - bison
-      - ca-certificate
+      - ca-certificates
       - cinnamon
       - curl
       - dkms
@@ -79,7 +79,6 @@
       - tor
       - tree
       - vim
-      - wireshark
       - wireshark-qt
   when: ansible_distribution == "Archlinux"
 
