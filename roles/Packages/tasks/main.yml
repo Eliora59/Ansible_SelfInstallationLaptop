@@ -49,28 +49,43 @@
       - yersinia
   when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
 
-# - name: Full upgrade ArchLinux
-#   pacman: 
-#     update_cache: yes
-#     upgrade: yes
-#     state: present
-#     name:
-#       - curl
-#       - cinnamon
-#       - git
-#       - vim
-#       - net-tools
-#       - htop
-#       - bison
-#       - base-devel
-#       - ca-certificate
-#       - dkms
-#       - firefox
-#   when: ansible_distribution == "Archlinux"
+- name: Full upgrade ArchLinux
+  pacman: 
+    update_cache: yes
+    upgrade: yes
+    state: latest
+    name:
+      - base-devel
+      - bison
+      - ca-certificate
+      - cinnamon
+      - curl
+      - dkms
+      - firefox
+      - git
+      - gnome-terminal
+      - gnupg
+      - htop
+      - hydra
+      - keepassxc
+      - laptop-detect
+      - macchanger
+      - net-tools
+      - nmap
+      - postgresql
+      - 
+      - vim
+  when: ansible_distribution == "Archlinux"
 
-# - name: Full upgrade of Rhel or CentOS
-#   yum: 
-#     update_cache: yes
-#     update_only: yes
-#     state: latest
-#   when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
+  # firmware-iwlwifi
+  # firmware-realtek
+  # dirmngr
+  # dynamips
+  # intel-microcode
+
+- name: Full upgrade of Rhel or CentOS
+  yum: 
+  update_cache: yes
+  update_only: yes
+  state: latest
+  when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
