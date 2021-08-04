@@ -85,7 +85,9 @@
 
 - name: Full upgrade of Rhel or CentOS
   yum: 
-  update_cache: yes
-  update_only: yes
-  state: latest
+    update_cache: yes
+    update_only: yes
+    state: latest
+    name:
+      - 
   when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
