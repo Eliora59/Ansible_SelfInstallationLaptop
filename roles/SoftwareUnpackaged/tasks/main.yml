@@ -58,7 +58,9 @@
     selection: hold
 - name: Installation of Terraform
   shell:
-    cmd: sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
-    cmd: curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-    cmd: sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-    cmd: sudo apt-get update && sudo apt-get install terraform
+    cmd: "{{ item }}"
+  with_items:
+  - sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+  - curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+  - sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+  - sudo apt-get update && sudo apt-get install terraform
