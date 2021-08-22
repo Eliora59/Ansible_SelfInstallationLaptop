@@ -38,6 +38,7 @@
       - python3-pyqt5
       - python3-pyqt5.qtsvg
       - python3-pyqt5.qtwebsockets
+      - software-properties-common
       - thunderbird
       - thunderbird-l10n-fr
       - tor
