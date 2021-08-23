@@ -2,6 +2,7 @@
 - name: "Self Installation of Laptop"
   become: yes
   hosts: localhost
+  connection: local
   roles:
   - Packages
   - SoftwareUnpackaged
