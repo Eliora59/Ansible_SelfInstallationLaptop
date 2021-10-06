@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Ankama Launcher
+Exec=/opt/AnkamaLauncher.AppImage
+Icon=/usr/share/icons/AnkamaLauncher.png
+Categories=Audio;Music;Player;AudioVideo;

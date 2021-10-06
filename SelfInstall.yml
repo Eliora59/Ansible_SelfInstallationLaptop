@@ -24,6 +24,15 @@
       src: vimrc.j2
       dest: /home/theophile/.vimrc
 
+  - name: Ajout du raccourci d'Ankama Launcher
+    file:
+      src: ankamalauncher.desktop
+      dest: /usr/share/applications/
+
+  - name: Ajout du logo d'Ankama Launcher
+    file:
+      src: ankamalauncher.png
+      dest: /usr/share/icons/
 
         ##################################### Can't reboot Localhost, "Running reboot with local connection would reboot the control node"
         # - name: "Reboot of Laptop"
