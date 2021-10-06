@@ -18,6 +18,7 @@
       - dkms
       - docker
       - docker.io
+      - docker-compose
       - dynamips
       - firefox-esr-l10n-fr
       - firmware-iwlwifi
