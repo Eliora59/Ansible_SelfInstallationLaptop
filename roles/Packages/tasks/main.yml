@@ -16,6 +16,8 @@
       - curl
       - dirmngr
       - dkms
+      - docker
+      - docker.io
       - dynamips
       - firefox-esr-l10n-fr
       - firmware-iwlwifi
