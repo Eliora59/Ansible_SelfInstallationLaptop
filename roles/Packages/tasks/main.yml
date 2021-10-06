@@ -22,6 +22,7 @@
       - dynamips
       - firefox-esr-l10n-fr
       - firmware-iwlwifi
+      - firmware-misc-non-free
       - firmware-realtek
       - git
       - gnome-terminal
