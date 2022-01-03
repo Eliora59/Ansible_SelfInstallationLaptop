@@ -32,5 +32,8 @@ wget -O - https://raw.githubusercontent.com/Eliora59/SelfInstall/main/init | bas
 ## To improve
 * Repository Visual Studio Code, to use modules like _apt_key_ and _apt_repository_ instead of module _shell_ with commands that microsoft gives.
 * Repository GNS3
-* Customizing desktop environment
+* Customizing desktop environment blabla bla pookie
 test
+
+
+test from visual studio code
