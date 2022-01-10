@@ -34,6 +34,8 @@
       src: ankamalauncher.png
       dest: /usr/share/icons/
 
+  - name: test
+
         ##################################### Can't reboot Localhost, "Running reboot with local connection would reboot the control node"
         # - name: "Reboot of Laptop"
         #   reboot:
